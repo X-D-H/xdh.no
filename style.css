@@ -1,123 +1,189 @@
+:root {
+  --Sooty: #160e17;
+  --BatsCloak: #26111a;
+  --ChocolateKiss: #36101d;
+  --WhatWeDointheShadows: #470e21;
+  --Merguez: #570824;
+  --RedElegance: #814552;
+  --PortWine: #a97c85;
+  --Mauvelous: #d0b6bc;
+  --FrenchPorcelain: #f6f3f6;
+
+  --SootyText: #623e66;
+  --BatsCloakText: #7e3856;
+  --ChocolateKissText: #982d52;
+  --WhatWeDointheShadowsText: #b22352;
+  --MerguezText: #cc1354;
+  --RedEleganceText: #bf8793;
+  --PortWineText: #452d32;
+  --MauvelousText: #81535d;
+  --FrenchPorcelainText: #aa8daa;
+
+  --Nero: #282229;
+  --ProfessorPlum: #3c353d;
+  --Liver: #504a51;
+  --Excalibur: #666066;
+  --CementFeet: #7c777d;
+  --HongKongMist: #938e94;
+  --UltimateGray: #aba6ab;
+  --Magnesium: #c3bfc4;
+  --SaltnPepa: #dcd9dd;
+}
+
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	box-sizing: inherit;
+  -moz-box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html,
 body {
-	box-sizing:border-box;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-size: 16px;
-	color: #fff;
-	background-color: #000;
-	font-weight: 300;
-	font-family: monospace, sans-serif;
+  font-size: 16px;
+  color: var(--FrenchPorcelain);
+  background-color: var(--Sooty);
+  font-weight: 300;
+  font-family: monospace, sans-serif;
+}
+
+::selection {
+  color: var(--MerguezText);
+  background-color: var(--ChocolateKiss);
+  text-shadow: none;
 }
 
 h1 {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 img {
-	margin: 0 auto;
-	width: 192px;
+  margin: 0 auto;
+  width: 192px;
 }
 
 p {
-	margin: 3em 0 0;
-	padding: 2em 3em;
-	border: 1px solid white;
-	border-image: linear-gradient(to left, #ff5f14 0%, #ff1478 100%);
-    border-image-slice: 1;
-	font-size: 1.15em;
+  position: relative;
+  margin: 3em auto 0;
+  padding: 2em 3em;
+  border: 1px solid var(--Merguez);
+  border-image: linear-gradient(135deg, var(--RedElegance) 0%, var(--WhatWeDointheShadows) 100%);
+  border-image-slice: 1;
+  font-size: 1.15em;
+  /* background-color: var(--Sooty); */
+}
+
+p::before,
+p::after {
+  opacity: 0.25;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+p::before {
+  box-shadow: inset 0 0 1rem var(--Merguez);
+}
+
+p::after {
+  box-shadow: 0 0 1rem var(--Merguez);
 }
 
 a.button {
-	font-size: 1.15em;
-	margin: 1em 1.5em;
-	padding: 1em 1.5em;
-	border: 1px solid transparent;
-	color: #fff;
+  font-size: 1.15em;
+  margin: 1em 1.5em;
+  padding: 1em 1.5em;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--FrenchPorcelain);
+}
+
+a.button:hover,
+a.button:focus {
+  text-decoration: underline;
+  color: var(--FrenchPorcelain);
 }
 
 .layout-full-center {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	width: 100%;
-	max-width: 512px;
-	margin: 0 auto;
-	height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 512px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .layout-full-center h1 {
-	margin: 0;
-	text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    max-width: 4em;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  max-width: 4em;
 }
 
 .layout-regular {
-	display: flex;
-	padding: 2em;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	background-color: #000;
+  display: flex;
+  padding: 2em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
 }
 
 .layout-regular h1 {
-	width: 100%;
+  width: 100%;
 }
 
 footer {
-	padding: 1em;
-	text-align: center;
+  padding: 1em;
+  text-align: center;
 }
 
 @media (max-width: 480px) {
-	body {
-		padding: 0.5em;
-	}
+  body {
+    padding: 0.5em;
+  }
 
-	h1 {
-		font-size: 2em;
-	}
+  h1 {
+    font-size: 2em;
+  }
 
-	.layout-regular {
-		padding: 1em;
-	}
+  .layout-regular {
+    padding: 1em;
+  }
 }
 
 @media (min-width: 481px) {
-	body {
-		padding: 1em;
-	}
+  body {
+    padding: 1em;
+  }
 
-	h1 {
-		font-size: 3em;
-	}
+  h1 {
+    font-size: 3em;
+  }
 
-	.layout-regular {
-		padding: 3em;
-	}
+  .layout-regular {
+    padding: 3em;
+  }
 
-	.layout-full-center {
-		justify-content: center;
-	}
+  .layout-full-center {
+    justify-content: center;
+  }
 }
