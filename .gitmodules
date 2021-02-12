@@ -1,3 +1,0 @@
-[submodule "calendars"]
-	path = calendars
-	url = git@github.com:bjornarhagen/calendars.git
