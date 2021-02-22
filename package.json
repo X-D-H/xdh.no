@@ -1,0 +1,25 @@
+{
+  "name": "xdh.no",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/X-D-H/xdh.no.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/X-D-H/xdh.no/issues"
+  },
+  "homepage": "https://github.com/X-D-H/xdh.no#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
