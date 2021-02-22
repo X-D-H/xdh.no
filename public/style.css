@@ -125,11 +125,11 @@ a.button:focus {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  align-content: flex-start;
   flex-direction: column;
   width: 100%;
   max-width: 66ch;
   margin: 0 auto;
-  height: 100%;
 }
 
 .layout-full-center h1 {
@@ -161,6 +161,13 @@ a.button:focus {
 footer {
   padding: 1em;
   text-align: center;
+}
+
+.page-spacer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
 }
 
 @media (max-width: 480px) {
