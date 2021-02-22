@@ -47,11 +47,12 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--FrenchPorcelain);
   background-color: var(--Sooty);
   font-weight: 300;
   font-family: monospace, sans-serif;
+  line-height: 1.6;
 }
 
 ::selection {
@@ -69,19 +70,21 @@ img {
   width: 192px;
 }
 
-p {
+h2 {
   position: relative;
-  margin: 3em auto 0;
+  margin: 3em auto;
   padding: 2em 3em;
   border: 1px solid var(--Merguez);
   border-image: linear-gradient(135deg, var(--RedElegance) 0%, var(--WhatWeDointheShadows) 100%);
   border-image-slice: 1;
   font-size: 1.15em;
   /* background-color: var(--Sooty); */
+  text-align: center;
+  width: 100%;
 }
 
-p::before,
-p::after {
+h2::before,
+h2::after {
   opacity: 0.25;
   content: "";
   position: absolute;
@@ -91,19 +94,23 @@ p::after {
   top: 0;
 }
 
-p::before {
+h2::before {
   box-shadow: inset 0 0 1rem var(--Merguez);
 }
 
-p::after {
+h2::after {
   box-shadow: 0 0 1rem var(--Merguez);
 }
 
+a {
+  color: var(--FrenchPorcelain);
+}
+
 a.button {
+  display: inline-block;
   font-size: 1.15em;
-  margin: 1em 1.5em;
   padding: 1em 1.5em;
-  border: 1px solid transparent;
+  border: 1px solid var(--FrenchPorcelain);
   text-decoration: none;
   color: var(--FrenchPorcelain);
 }
@@ -120,7 +127,7 @@ a.button:focus {
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  max-width: 512px;
+  max-width: 66ch;
   margin: 0 auto;
   height: 100%;
 }
